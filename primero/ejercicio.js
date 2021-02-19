@@ -33,13 +33,13 @@ const listar = () => {
 const inscribir = argv => {
     const curso = cursos.findIndex(curso => curso.Id === argv.d)
     if (curso === -1) {
-        console.log("perro no esta".red)
+        console.log("el curso no esta".red)
     } else {
         const Archivo = (nombre, cedula, Id) => {
             const texto = "El nombre del ingresado es: " + nombre + " con cedula : " + cedula + " En el curso: " + Id 
             fs.writeFile("Ingresado.txt", texto, (err) => {
-                if (err) console.log("Un error muy perro".red)
-                else (console.log("Se creo perro".green))
+                if (err) console.log("Un error".red)
+                else (console.log("Se creo".green))
                 console.log(texto)
             })
         }
